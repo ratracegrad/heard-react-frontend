@@ -21,7 +21,7 @@ function App() {
       })
       .then((data) => {
         console.log(data);
-        setTransactions(data);
+        setTransactions(data.transactions);
       });
   }, []);
 
