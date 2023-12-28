@@ -67,7 +67,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {transactions && transactions.length && transactions.map((transaction: Transaction) => (
+          {transactions.length > 0 && transactions.map((transaction: Transaction) => (
             <tr key={transaction.id}>
               <td className="border border-gray-400 px-4 py-2">
                 {transaction.id}
