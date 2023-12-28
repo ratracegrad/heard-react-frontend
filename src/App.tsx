@@ -67,39 +67,41 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {transactions.length && transactions.map((transaction: Transaction) => (
-            <tr key={transaction.id}>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.id}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.title}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.description}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.amount}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.fromAccount}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.toAccount}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                {transaction.transactionDate}
-              </td>
-              <td className="border border-gray-400 px-4 py-2">
-                <button className="mr-2 rounded bg-blue-500 px-4 py-2 text-white font-bold hover:bg-blue-700">
-                  Edit
-                </button>
-                <button className="rounded bg-red-500 px-4 py-2 text-white font-bold hover:bg-red-700">
-                  Remove
-                </button>
-              </td>
-            </tr>
-          ))}
+          {transactions.map((transaction: Transaction) => {
+            return (
+              <tr key={transaction.id}>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.id}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.title}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.description}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.amount}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.fromAccount}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.toAccount}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  {transaction.transactionDate}
+                </td>
+                <td className="border border-gray-400 px-4 py-2">
+                  <button className="mr-2 rounded bg-blue-500 px-4 py-2 text-white font-bold hover:bg-blue-700">
+                    Edit
+                  </button>
+                  <button className="rounded bg-red-500 px-4 py-2 text-white font-bold hover:bg-red-700">
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
